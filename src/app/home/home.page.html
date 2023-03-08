@@ -1,0 +1,70 @@
+
+<ion-header>
+  <ion-toolbar >
+    <ion-title>
+      LightSpeed 
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/register">
+        <ion-icon name="document-attach-outline"></ion-icon>
+        Documentation
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding  >
+  <ion-card class="carta" >
+    <ion-card-header>
+      <ion-card-title>Get LightSpeed now!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Escape from a exploding Supernova in your trusty spaceship!
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <img src=".\assets\LightSpeed.jpeg" alt=""> 
+
+
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title>Features</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list class="carta" >
+        <ion-item  >
+          <ion-icon name="star" slot="start"></ion-icon>
+          <ion-label>Embark in an infinite adventure!</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="build" slot="start"></ion-icon>
+          <ion-label>Swap between different unlockable spaceships!</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="trophy" slot="start"></ion-icon>
+          <ion-label>Beat your high scores!</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-rating [rate]="rate"
+        readonly="false"
+        size="default" 
+        (rateChange)="onRateChange($event)">
+</ion-rating>
+
+  </ion-card>
+
+  <ion-card class="carta">
+    <ion-card-header>
+      <ion-card-title>Download</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img class="boton"src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" > 
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
