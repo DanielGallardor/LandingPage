@@ -1,28 +1,26 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, NgControl } from '@angular/forms';
 import { HomePage } from './home.page';
-import { IonicRatingModule } from 'ionic-rating';
+import { IonicRatingComponent } from 'ionic-rating-component';
+import { IonicRatingComponentModule } from 'ionic-rating-component';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    FormsModule,
+    HomePageRoutingModule,
+    IonicRatingComponentModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
 
 @NgModule({
-  imports: [
-    IonicModule.forRoot(),
-    IonicRatingModule
-  ],
+  imports: [IonicModule.forRoot()],
 })
 export class AppModule {}
