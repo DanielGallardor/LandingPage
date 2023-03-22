@@ -1,0 +1,51 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+img{
+  margin-left: 40%;
+  width: 25%;
+  height: 80;
+}
+ion-content {
+  --background: #ccc url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80") no-repeat center center / cover;
+}
+.boton{
+  width: 25%;
+}
+.carta{
+background-color: transparent;
+}
+
+ion-textarea.custom-textarea {
+  --background: #373737;
+  --color: #fff;
+  --padding-end: 10px;
+  --padding-start: 10px;
+  --placeholder-color: #ddd;
+  --placeholder-opacity: 0.8;
+}
