@@ -2,9 +2,9 @@
   <ion-toolbar>
     <ion-title> LightSpeed </ion-title>
     <ion-buttons slot="end">
-      <ion-button routerLink="/register">
+      <ion-button >
         <ion-icon name="document-attach-outline"></ion-icon>
-        Documentation
+        <a href="https://docs.google.com/document/d/1dhu9IGYW8YO2mzRJBPdgDWf9Ya3bLp3Y/edit">Documentation</a>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -57,7 +57,8 @@
       readonly="false"
       fontSize="32px"
       (ratingChanged)="onRatingChange($event)"
-      ngModel="starRating"
+      ngModel="starRatingGameplay"
+      [(ngModel)]="gameplay"
     >
     </ionic-rating-component>
     <ion-card-header>
@@ -72,7 +73,8 @@
       readonly="false"
       fontSize="32px"
       (ratingChanged)="onRatingChange($event)"
-      ngModel="starRating"
+      ngModel="starRatingMusic"
+      [(ngModel)]="music"
     >
     </ionic-rating-component>
   <ion-card-header>
@@ -87,7 +89,8 @@
     readonly="false"
     fontSize="32px"
     (ratingChanged)="onRatingChange($event)"
-    ngModel="starRating"
+    ngModel="starRatingDesign"
+    [(ngModel)]="design"
   >
   </ionic-rating-component>
 <ion-card-header>
@@ -102,7 +105,8 @@
   readonly="false"
   fontSize="32px"
   (ratingChanged)="onRatingChange($event)"
-  ngModel="starRating"
+  ngModel="starRatingStory"
+  [(ngModel)]="story"
 >
 </ionic-rating-component>
 <ion-card-header>
@@ -117,15 +121,16 @@
   readonly="false"
   fontSize="32px"
   (ratingChanged)="onRatingChange($event)"
-  ngModel="starRating"
+  ngModel="starRatingDifficulty"
+  [(ngModel)]="difficulty"
 >
 </ionic-rating-component>
 <ion-card-header>
   <ion-card-title>Type your suggestion!</ion-card-title>
 </ion-card-header>
-<ion-textarea class="custom-textarea" placeholder="Type something here"></ion-textarea>
+<ion-textarea class="custom-textarea" [(ngModel)]="commentary" placeholder="Type something here"></ion-textarea>
  <div style="display:flex; justify-content: center; align-items: center;" >
-<ion-button shape="round">SEND!</ion-button>
+<ion-button shape="round" (click)="SendData()">SEND!</ion-button>
 </div>
   </ion-card>
 
@@ -134,10 +139,10 @@
       <ion-card-title>Download</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <img
+      <a href="https://drive.google.com/drive/folders/1ij6ckr5n5pZ3_OQZKR2_Uf8VYcbP2Jxa?usp=sharing"><img
         class="boton"
         src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-      />
+      /></a>
     </ion-card-content>
   </ion-card>
 </ion-content>
